@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { PortfolioItem } from '../types';
+import { PortfolioItem } from '../types.ts';
 
 interface PortfolioGalleryProps {
   items: PortfolioItem[];
@@ -20,7 +20,7 @@ const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({ items }) => {
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
         <div>
           <h2 className="text-4xl md:text-5xl font-black mb-4">Our Works</h2>
-          <p className="text-gray-500 max-w-md">창의적인 시선과 정밀한 기술력으로 완성된 웹사이트테스트의 포트폴리오를 확인해보세요.</p>
+          <p className="text-gray-500 max-w-md">창의적인 시선으로 완성된 포트폴리오를 확인해보세요.</p>
         </div>
         
         <div className="flex flex-wrap gap-2">
@@ -40,7 +40,7 @@ const PortfolioGallery: React.FC<PortfolioGalleryProps> = ({ items }) => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {filteredItems.map((item) => (
           <div key={item.id} className="group cursor-pointer">
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-gray-900 border border-white/5 mb-6">
